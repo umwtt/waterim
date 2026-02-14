@@ -7,7 +7,7 @@ export default function CreditsScroll({ onEnd }) {
     const duration = BASE_DURATION / speed; // toplam süre
 
   const slower = () => setSpeed((s) => Math.max(0.5, s - 0.25));
-  const faster = () => setSpeed((s) => Math.min(2, s + 0.25));  
+  const faster = () => setSpeed((s) => Math.min(5, s + 0.25));  
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function CreditsScroll({ onEnd }) {
         </p>
       </section>
 
-      <section>
+      <section className="midBlock">
         <small>Kalbim seni unutacak kadar adi ise, ellerim onu parçalayacak kadar asildir.</small>
       </section>
 
@@ -33,10 +33,10 @@ export default function CreditsScroll({ onEnd }) {
         </p>
       </section>
 
-      <section>
-        <small>365 gün, geceyim</small> <br />
-        <small>Bi' gün öp dudaklarımı, de ki; "Günaydın"</small> <br />
-        <small>Bana doğ, bana doğ, bir kere de bana doğ</small> <br />
+      <section className="midBlock">
+        <small>365 gün, geceyim</small>                                  <br />
+        <small>Bi' gün öp dudaklarımı, de ki; "Günaydın"</small>         <br />
+        <small>Bana doğ, bana doğ, bir kere de bana doğ</small>          <br />
         <small>Ya da yo, yalan ol, ilelebet haram ol, hayal ol</small>
       </section>
 
@@ -47,6 +47,11 @@ export default function CreditsScroll({ onEnd }) {
         </p>
       </section>
 
+      <section className="midBlock">
+        <small>Mutlu sonumuz olmasın..</small>                                      <br />
+        <small>Mutlu sonsuz olsun.</small>
+      </section>
+
       <section className="block">
         <h1>Ω</h1>
         <p>
@@ -54,11 +59,23 @@ export default function CreditsScroll({ onEnd }) {
         </p>
       </section>
 
+      <section className="midBlock">
+        <small>Bu sabah bir umut var içimde</small>                                      <br />
+        <small>Nasıl olsa geri gelirsin diye</small>             <br />
+        <small>Her şey yerli yerinde yine</small>              <br />
+        <small>Bu sabahların bir anlamı olmalı</small>
+      </section>
+
       <section className="block">
         <h1>φ</h1>
         <p>
           bazenleri de öncesinde yaşadıklarını düşünüyorum ister istemez. hayatında onların tekrarlanmasından korkuyorsun ilişkinin sorumluluğundan çekiniyosun çok iyi anlıyorum ve çok haklısın. bu yüzden de biz sevgili olsak da olmasak da birbirimiz için bir yük veya sorumluluk değil huzur olmalıyız ve çok uzun zamandır bunu zaten yapıyoruz çık da güzel yapıyoruz iyi ki varsın iyi ki tanışmışız o gün ve iyi ki bitanemsin
         </p>
+      </section>
+
+      <section className="midBlock">
+        <small>+ beraber mac izlemeye ne dersin :) (yıl 2022)</small>             <br />
+        <small>- salep iceriz</small>
       </section>
       
       <section className="block">
@@ -68,18 +85,36 @@ export default function CreditsScroll({ onEnd }) {
         </p>
       </section>
 
-        <section className="block">
+      <section className="midBlock">
+        <small>Arıyo' kalbim</small>                      <br />
+        <small>Atıyo' tık tık, var bi' telaş</small>      <br />
+        <small>Dön yanıma gel</small>                     <br />
+        <small>Bütün İstanbul'u görüyo' bu teras</small>
+      </section>
+
+      <section className="block">
         <h1>ɤ</h1>
         <p>
           ve dee neler olursa olsun her şeyin üzerine sonunda yine biziz ve iyi ki de biziz seni çok seviyorum her zaman hayatımda ol iyimde kötümde sen ol istiyorum çünkü benim mutluluğum benim dünyam sensin
         </p>
       </section>
 
+      <section className="midBlock">
+        <small>365 gün, geceyim</small>                                      <br />
+        <small>Bi' gün öp dudaklarımı, de ki; "Günaydın"</small>             <br />
+        <small>Bana doğ, bana doğ, bir kere de bana doğ</small>              <br />
+        <small>Ya da yo, yalan ol, ilelebet haram ol, hayal ol</small>
+      </section>
+
       <section className="block">
         <h1>;</h1>
         <p>
-          sevgililer günü değil evlilik yıldönümümüzü kutlayacağımız günlere gelsin.. seni çooook seviyorum 💗
+          sen ben biz iyi ki bugünlere gelmisiz
         </p>
+      </section>
+
+      <section className="midBlock">
+        <small>seni tanıdığımdan beri her zaman yanımda olduğun, beni desteklediğin,<br/>bana güvendiğin her an için sana sonsuz teşekkür ederim güzelim.</small>
       </section>
     </div>
 

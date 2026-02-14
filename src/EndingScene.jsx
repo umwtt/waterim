@@ -1,27 +1,175 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function EndingScreen() {
-  const [accepted, setAccepted] = useState(false);
+export default function EndingScreen({ onReplay }) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 50);
+    return () => clearTimeout(t);
+  }, []);
 
   return (
-    <div className="ending">
-      {!accepted ? (
-        <>
-          <h1>Umut adlı kişi sizi güzel bir geleceğe davet ediyor</h1>
+    <div className={`final ${visible ? "fade-in" : ""}`}>
+          <div className="heart">
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
 
-          <div className="buttons">
-            <button className="yes" onClick={() => setAccepted(true)}>
-              Evet
-            </button>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
 
-            <button className="no" disabled>
-              Hayır
-            </button>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel soft-pink"></div>
+
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel white"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel soft-pink"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel pink"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
+            <div className="pixel"></div>
           </div>
-        </>
-      ) : (
-        <h2 className="heart">❤</h2>
-      )}
-    </div>
+
+
+          <p>seni çok seviyorum bitanem</p>
+          <button onClick={onReplay}>Tekrar izle</button>
+        </div>
   );
 }

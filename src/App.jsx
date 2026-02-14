@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CreditsScroll from "./CreditsScroll";
+import EndingScreen from "./EndingScene";
 import "./index.css";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
 
   const hours = time.getHours().toString().padStart(2, "0");
   const minutes = time.getMinutes().toString().padStart(2, "0");
+  const seconds = time.getSeconds().toString().padStart(2, "0");
 
   const date = time.getDate();
   const month = (time.getMonth() + 1).toString().padStart(2, "0");
@@ -40,7 +42,7 @@ export default function App() {
         <div className={`intro ${fade ? "fade-out" : ""}`}>
           <small>{dateString}</small>
           <div className="clock">
-            {hours}:{minutes}
+            {hours}:{minutes}:{seconds}
           </div>
           <div className="greeting">{greeting()}</div>
           <button onClick={start}>Başlat</button>
@@ -48,173 +50,13 @@ export default function App() {
       )}
 
       {phase === "playing" && (
-        <CreditsScroll onEnd={() => setPhase("ending")} />
+        <CreditsScroll key={phase} onEnd={() => setPhase("ending")} />
       )}
 
       {phase === "ending" && (
-        <div className="final">
-          <div class="heart">
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel soft-pink"></div>
-
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel white"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel soft-pink"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel pink"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-          </div>
-
-
-          <p>Her şey için teşekkürler.</p>
-          <button onClick={() => setPhase("playing")}>Tekrar izle</button>
-        </div>
+        <EndingScreen onReplay={() => setPhase("playing")} />
       )}
+
     </div>
   );
 }
